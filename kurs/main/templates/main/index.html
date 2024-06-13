@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{% static 'main/icons/favicon.ico' %}" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'main/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const cards = document.querySelectorAll('.custom-card');
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+    <style>
+        .custom-card {
+            background-color: #007bff;
+            width: 350px;
+            color: white;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+
+        }
+
+        .custom-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        @media (max-width: 1024px) {
+            .zvon .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 1em;
+            }
+
+            .row {
+                justify-content: center;
+            }
+
+            .custom-card {
+                margin-top: 1em;
+            }
+
+            .col-md-4 {
+                width: 100%;
+                max-width: 400px;
+            }
+
+        }
+    </style>
+
+    <title>Главная</title>
+</head>
+
+<body>
+
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target py-4" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+                <div class="col-3 ml-auto order-2 text-end">
+                    <div class="site-logo">
+                        <a href="/" class="fw-bold">ЦПБ-С</a>
+                    </div>
+                </div>
+
+                <div class="col-9 order-1 text-left mr-auto">
+
+
+                    <span class="d-inline-block d-lg-block"><a href="#"
+                            class="text-black site-menu-toggle js-menu-toggle py-5"><span
+                                class="icon-menu h3"></span></a></span>
+
+
+
+                    <nav class="site-navigation text-end ml-auto d-none d-lg-none" role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                            <li class="active"><a href="/" class="nav-link">Главная</a></li>
+                            <li><a href="news" class="nav-link">Новости</a></li>
+                            <li><a href="about" class="nav-link">О нас</a></li>
+                            <li><a href="rules" class="nav-link">Правила пожарной безопасности</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="adapt">
+            <div class="kontakt mt-5">
+                <h1><span class="spasat">Пожар? </span>Звоните</h1>
+            </div>
+            <div class="kontakt">
+                <h1>+7 (382)<span class="spasat"> 595‒21‒06</span></h1>
+            </div>
+
+            <div class="row zvon">
+                <div class="col textPh display-6 ms-2">
+                    Региональный центр по делам гражданской обороны, черезвычайным ситуациям и ликвидации последствий
+                    стихийных бедствий
+                </div>
+                <div class="col photoG">
+                    <img src="{% static 'main/img/gruz.jpg' %}" alt="Центр пожарной безопасности"
+                        class="responsive-image">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class=" mt-5 text-center display-5"> Чем мы <span class="spasat">занимаемся?</span> </div>
+            <div class="row text-center mt-5 display-6 zvon">
+                <div class="col"><span class="spasat">1.</span> Ликвидация пожаров</div>
+                <div class="col"><span class="spasat">2.</span> Ликвидация последствий ЧС</div>
+                <div class="col"><span class="spasat">3.</span> Помощь гражданам</div>
+            </div>
+        </div>
+        <div class="container mt-5 CardsDo">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Деятельность по обеспечению безопасности в чрезвычайных ситуациях
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Обеспечение безопасности в области использования
+                                атомной энергии</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Предоставление услуг в области лесоводства и лесозаготовок</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 text-center display-5"> Где мы <span class="spasat">находимся?</span> </div>
+        <div class="row zvon mt-5">
+            <div class="col text-start mt-5 ms-5 display-6 adr">Адрес: ул. Строителей, 28, Стрежевой, Томская обл.
+            </div>
+            <div class="col pmap">
+                <iframe class="mapp"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7802.73920117702!2d77.59233803318834!3d60.73066170516719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4313333fbf4f2067%3A0x359cd236e6d32d32!2z0J_QvtC20LDRgNC90LDRjyDQp9Cw0YHRgtGM!5e0!3m2!1sru!2sru!4v1710854551367!5m2!1sru!2sru"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="opac container footer">
+        <div class="d-flex row">
+            <div class="col">
+                <div class="text-center">ООО
+                    "ЦПБ-С"
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">Sarvaev</div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'main/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/jquery.sticky.js'%}"></script>
+    <script src="{% static 'main/js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /custom_admin_dashboard/
+Disallow: /manage_news/
+Disallow: /add_news/
+Disallow: /edit_news/
+Disallow: /delete_news/
+Disallow: /manage_cheatsheets/
+Disallow: /add_cheatsheet/
+Disallow: /edit_cheatsheet/
+Disallow: /delete_cheatsheet/
+Disallow: /logout/
